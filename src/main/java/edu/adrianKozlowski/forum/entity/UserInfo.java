@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by Dawid Stankiewicz on 03.08.2017.
+ * Created by Adrian Kozłowski on 03.08.2018.
  */
 
 @Entity

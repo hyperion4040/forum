@@ -1,5 +1,5 @@
 /**
- * Created by Dawid Stankiewicz on 04.08.2016
+ * Created by Adrian Kozłowski on 04.08.2018
  */
 package edu.adrianKozlowski.forum.service.model;
 

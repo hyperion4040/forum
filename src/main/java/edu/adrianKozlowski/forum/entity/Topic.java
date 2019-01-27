@@ -1,20 +1,11 @@
 /**
- * Created by Dawid Stankiewicz on 17.07.2016
+ * Created by Adrian Kozłowski on 17.07.2018
  */
 package edu.adrianKozlowski.forum.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 
 
 @Entity

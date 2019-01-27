@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Dawid Stankiewicz on 02.08.2017.
+ * Created by Adrian Kozłowski on 02.08.2018.
  */
 
 @Service

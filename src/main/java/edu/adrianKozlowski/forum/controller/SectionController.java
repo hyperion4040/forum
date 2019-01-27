@@ -1,12 +1,16 @@
 /**
- * Created by Dawid Stankiewicz on 19.07.2016
+ * Created by Adrian Kozłowski on 19.07.2018
  */
 package edu.adrianKozlowski.forum.controller;
 
-import edu.adrianKozlowski.forum.service.SectionService;
-import javax.validation.Valid;
-
 import edu.adrianKozlowski.forum.controller.form.NewSectionForm;
+import edu.adrianKozlowski.forum.entity.Role;
+import edu.adrianKozlowski.forum.entity.Section;
+import edu.adrianKozlowski.forum.entity.User;
+import edu.adrianKozlowski.forum.service.RoleService;
+import edu.adrianKozlowski.forum.service.SectionService;
+import edu.adrianKozlowski.forum.service.TopicService;
+import edu.adrianKozlowski.forum.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -18,12 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import edu.adrianKozlowski.forum.entity.Role;
-import edu.adrianKozlowski.forum.entity.Section;
-import edu.adrianKozlowski.forum.entity.User;
-import edu.adrianKozlowski.forum.service.RoleService;
-import edu.adrianKozlowski.forum.service.TopicService;
-import edu.adrianKozlowski.forum.service.UserService;
+import javax.validation.Valid;
 
 
 @Controller

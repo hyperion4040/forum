@@ -1,10 +1,9 @@
 /**
- * Created by Dawid Stankiewicz on 10.07.2016
+ * Created by Adrian Kozłowski on 10.01.2019
  */
 package edu.adrianKozlowski.forum.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

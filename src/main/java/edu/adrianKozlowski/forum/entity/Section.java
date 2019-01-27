@@ -1,15 +1,10 @@
 /**
- * Created by Dawid Stankiewicz on 17.07.2016
+ * Created by Adrian Kozłowski on 10.01.2019
  */
 package edu.adrianKozlowski.forum.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 
 @Entity

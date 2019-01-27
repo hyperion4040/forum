@@ -1,5 +1,5 @@
 /**
- * Created by Dawid Stankiewicz on 06.08.2016
+ * Created by Adrian Kozłowski on 06.08.2018
  */
 package edu.adrianKozlowski.forum.exception;
 
