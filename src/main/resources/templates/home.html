@@ -22,7 +22,7 @@
                                 <h4 th:text="#{sections}">Sections</h4>
                             </div>
                             <div class="col s6">
-                                <a sec:authorize="hasAnyAuthority('ADMIN', 'HEAD_ADMIN')" th:href="@{/section/new}" th:text="#{new.section}"
+                                <a sec:authorize="hasAnyAuthority('ADMIN', 'HEAD_ADMIN', 'USER')" th:href="@{/section/new}" th:text="#{new.section}"
                                     class="right waves-effect waves-light btn"></a>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <ul class="collapsible" data-collapsible="accordion">
                             <li th:each="section : ${sections}">
                                 <div class="collapsible-header">
-                                    <a th:href="@{/section/} + ${section.id}" th:text="${section.name}"></a>
+                                    <a th:href="@{'/section/' + ${section.id}}" th:text="${section.name}"></a>
                                 </div>
                                 <div class="collapsible-body">
                                     <p th:text="${section.description}"></p>
@@ -62,7 +62,7 @@
                         <div class="row" th:each="topic : ${topics}">
                             <div class="col s12">
                                 <div class="section">
-                                    <a th:href="@{/topic/} + ${topic.id}">
+                                    <a th:href="@{'/topic/' + ${topic.id}}">
                                         <span th:text="'@' + ${topic.user.username} + ': ' + ${topic.title}"></span> <span class="right"
                                             th:text="${topic.creationDate} ? ${#calendars.format(topic.creationDate, 'dd MMMM yyyy HH:mm')}"></span> <span class="truncate"
                                             th:text="${topic.content}"></span>
@@ -92,7 +92,7 @@
                         <div class="row" th:each="post : ${posts}">
                             <div class="col s12">
                                 <div class="section">
-                                    <a th:href="@{/topic/} + ${post.topic.id}">
+                                    <a th:href="@{'/topic/' + ${post.topic.id}}">
                                         <span th:text="'@' + ${post.user.username} + ' ' + #{reply.to} + ' ' + ${post.topic.title}"></span> <span class="right"
                                             th:text="${post.creationDate} ? ${#calendars.format(post.creationDate, 'dd MMMM yyyy HH:mm')}"></span> <span class="truncate"
                                             th:text="${post.content}"></span>

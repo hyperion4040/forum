@@ -12,7 +12,7 @@
         <div class="row z-depth-1" style="margin-bottom: 40px; padding: 10px;">
             <div class="col s12">
                 <h5>
-                    <a th:href="@{/section/} + ${topic.section.id}" th:text="${topic.section.name}"></a>
+                    <a th:href="@{'/section/' + ${topic.section.id}}" th:text="${topic.section.name}"></a>
                     : : <span th:text="${topic.title}"></span>
                 </h5>
             </div>
@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col s11 right">
                             <a th:href="@{/user/} + ${topic.user.username}" th:text="'@' + ${topic.user.username}"></a>
-                            <img th:src="@{/resources/img/pp/} + ${topic.user.idProfilePicture} + '.jpg'" class="responsive-img" />
+                            <img th:src="@{/resources/img/pp/} + ${topic.user.id} + '.jpg'" class="responsive-img" />
                         </div>
                     </div>
                     <div class="col s12"></div>
@@ -43,7 +43,7 @@
                             <div class="divider"></div>
                         </div>
                     </div>
-                    <h6 th:text="${topic.user.footer}" class="blue-grey-text lighten-3-text"></h6>
+                    <h6 th:text="${topic.user.id}" class="blue-grey-text lighten-3-text"></h6>
                 </div>
             </div>
 
@@ -68,7 +68,7 @@
             <div class="col s2  center">
                 <a th:href="@{/user/} + ${post.user.username}" th:text="'@' + ${post.user.username}"></a>
                 <div class="col s12">
-                    <img th:src="@{/resources/img/pp/} + ${post.user.idProfilePicture} + '.jpg'" class="responsive-img" />
+                    <img th:src="@{/resources/img/pp/} + ${post.user.id} + '.jpg'" class="responsive-img" />
                 </div>
             </div>
 
@@ -79,10 +79,10 @@
                         <p
                             th:text="${post.creationDate} ? ${#calendars.format(post.creationDate, 'HH:mm:ss')} + ' ' + #{page.topic.on.day} + ' ' + ${#calendars.format(post.creationDate, 'dd MMMM yyyy')} + ' ID: ' + ${post.id} "></p>
                         <p th:utext="${#strings.replace(post.content,T(java.lang.System).getProperty('line.separator'),'&lt;br /&gt;')}"></p>
-                        <div th:if="${post.user.footer != null}" class="divider"></div>
+                        <div th:if="${post.user.id != null}" class="divider"></div>
                     </div>
                 </div>
-                <h6 th:text="${post.user.footer}" class="blue-grey-text lighten-3-text"></h6>
+                <h6 th:text="${post.user.id}" class="blue-grey-text lighten-3-text"></h6>
             </div>
 
 

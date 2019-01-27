@@ -29,7 +29,7 @@ public class User implements Serializable {
     @Column
     private boolean active;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
    @JoinTable(name = "rolesOfUsers",
         joinColumns = @JoinColumn(name = "user", referencedColumnName = "id")
            , inverseJoinColumns = @JoinColumn(name = "role", referencedColumnName = "id")

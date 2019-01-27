@@ -65,8 +65,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public void create(User user) {
         Set<Role> roles = new HashSet<>();
-//        Role role = roleService.findByName("USER");
-        Role role = new Role("USER","user");
+        Role role = roleService.findByName("USER");
+//        Role role = new Role("USER","user");
         roles.add(role);
         user.setRoles(roles);
 

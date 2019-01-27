@@ -3,27 +3,23 @@
  */
 package edu.adrianKozlowski.forum.controller;
 
-import edu.adrianKozlowski.forum.entity.Topic;
-import edu.adrianKozlowski.forum.service.SectionService;
-import javax.validation.Valid;
-
 import edu.adrianKozlowski.forum.controller.form.NewPostForm;
 import edu.adrianKozlowski.forum.controller.form.NewTopicForm;
+import edu.adrianKozlowski.forum.entity.Post;
+import edu.adrianKozlowski.forum.entity.Topic;
+import edu.adrianKozlowski.forum.service.PostService;
+import edu.adrianKozlowski.forum.service.SectionService;
+import edu.adrianKozlowski.forum.service.TopicService;
+import edu.adrianKozlowski.forum.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import edu.adrianKozlowski.forum.entity.Post;
-import edu.adrianKozlowski.forum.service.PostService;
-import edu.adrianKozlowski.forum.service.TopicService;
-import edu.adrianKozlowski.forum.service.UserService;
+import javax.validation.Valid;
 
 
 @Controller
@@ -42,7 +38,8 @@ public class TopicController {
     @Autowired
     private UserService userService;
     
-    @RequestMapping(value = "{idTopic}", method = RequestMethod.GET)
+//    @RequestMapping(value = "{idTopic}", method = RequestMethod.GET)
+    @GetMapping("{idTopic}")
     public String getTopicById(@PathVariable int idTopic,
                                Model model) {
         Topic topic = topicService.findOne(idTopic);
