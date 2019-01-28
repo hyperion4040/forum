@@ -26,10 +26,9 @@ Example of simple CRUD web application with Spring Framework and Thymeleaf.
 The connection settings are in src/main/resources/application.properties
 
     ## Database connection ##
-    spring.datasource.url=jdbc:mysql://localhost:3306/DB_NAME
-    spring.datasource.username=USERNAME
-    spring.datasource.password=PASSWORD
+    spring.datasource.url=jdbc:h2://localhost:3306/DB_NAME
+    spring.datasource.username=sa
+    spring.datasource.password=
 
-### Diagram
-![Sorry, error loading image of diagram](http://i.imgur.com/1W1xaBi.png)
+
 
