@@ -59,7 +59,7 @@ public class Application extends SpringBootServletInitializer {
 
             user.setEmail("darthir@onet.eu");
             user.setUsername("root");
-            user.setPassword("5kwrVhWh");
+            user.setPassword("Root12#$");
 //            user.setRoles(roles);
             userService.create(user);
         };
