@@ -22,7 +22,7 @@ public class Application extends SpringBootServletInitializer {
             User user = new User();
             user.setEmail("darthir@onet.eu");
             user.setUsername("root");
-            user.setPassword("5kwrVhWh");
+            user.setPassword("Root12#$");
             userService.create(user);
         };
 
